@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Container} from "react-bootstrap";
 import logo from '../../assets/images/logo.jpg';
 import {Link, NavLink} from "react-router-dom";
@@ -6,24 +6,26 @@ import '../../styles/header.css'
 
 const nav__links = [
     {
-        display: 'Home',
+        display: 'Главная',
         path: '/home'
     },
     {
-        display: 'Products',
+        display: 'Товары',
         path: '/products'
     },
     {
-        display: 'Cart',
+        display: 'Корзина',
         path: '/cart'
     },
     {
-        display: 'Contacts',
+        display: 'Контакты',
         path: '/contacts'
     },
 ]
 
 const Header = () => {
+    const menuRef = useRef(null)
+    const toggleMenu = () => menuRef.current.classList.toggle('show__menu')
     return (
         <header className='header'>
             <Container>
@@ -32,11 +34,18 @@ const Header = () => {
                         <img src={logo} alt="logo"/>
                         <h5>Hot Dog</h5>
                     </div>
-                    <div className="navigation">
+                    <div className="navigation" ref={menuRef}>
                         <div className="menu d-flex align-items-center gap-5">
                             {
                                 nav__links.map((item, index) => (
-                                    <NavLink to={item.path} key={index}>{item.display}</NavLink>
+                                    <NavLink
+                                        to={item.path}
+                                        key={index}
+                                        className={navClass => navClass.isActive ? 'active__menu' : ''}
+                                        onClick={toggleMenu}
+                                    >
+                                        {item.display}
+                                    </NavLink>
                                 ))
                             }
                         </div>
@@ -44,12 +53,14 @@ const Header = () => {
                     <div className="nav__right d-flex align-items-center gap-3">
                         <span className="cart__icon">
                             <i className="ri-shopping-basket-fill"></i>
-                            <span className="cart__badge"></span>
+                            <span className="cart__badge">3</span>
                         </span>
                         <span className="user">
-                            <Link to='/login'><i className="ri-user-3-fill"></i></Link>
+                            <Link to='/login'>
+                                <i className="ri-user-3-fill"></i>
+                            </Link>
                         </span>
-                        <span className="mobile__menu">
+                        <span className="mobile__menu" onClick={toggleMenu}>
                             <i className="ri-menu-line"></i>
                         </span>
                     </div>

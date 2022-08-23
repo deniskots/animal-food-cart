@@ -1,0 +1,40 @@
+.home__content{
+    padding-top: 112px;
+}
+
+.home__title{
+    font-size: 40px;
+    line-height: 55px;
+}
+.home__title span{
+    color: #df2020;
+}
+.home__content p{
+    font-size: 16px;
+    line-height: 30px;
+}
+.home__btns button {
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.order__btn {
+    background: #df2020;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.order__btn:hover {
+    background: #212245;
+}
+.products__btn {
+    background: transparent;
+    border: 1px solid #df2020 !important;
+}
+
+.products__btn a {
+    color: #df2020;
+}
