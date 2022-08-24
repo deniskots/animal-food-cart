@@ -4,6 +4,10 @@ import product_01_image_03 from "../images/product_01_image_03.jpg";
 import product_02_image_01 from "../images/product_02_image_01.jpg";
 import product_03_image_02 from "../images/product_03_image_02.jpg";
 import product_03_image_01 from "../images/product_03_image_01.jpg";
+import product_04_image_01 from "../images/product_04_image_01.jpg";
+import product_05_image_01 from "../images/product_05_image_01.jpg";
+import product_05_image_02 from "../images/product_05_image_02.jpg";
+import product_05_image_03 from "../images/product_05_image_03.jpg";
 import product_06_image_01 from "../images/product_06_image_01.jpg";
 import product_06_image_02 from "../images/product_06_image_02.jpg";
 import product_06_image_03 from "../images/product_06_image_03.jpg";
@@ -17,7 +21,7 @@ import product_10_image_01 from "../images/product_10_image_01.jpg";
 const products = [
     {
         id: "01",
-        title: "Bon Appetit Cat Adult Gourmand",
+        title: "Bon Appetit Cat Adult",
         price: 24.0,
         image01: product_01_image_01,
         image02: product_01_image_02,
@@ -56,7 +60,7 @@ const products = [
 
     {
         id: "05",
-        title: "Royal Canin Neutered Adult Medium Dog",
+        title: "Royal Canin Neutered ",
         price: 24.0,
         image01: product_05_image_01,
         image02: product_05_image_02,
@@ -79,9 +83,9 @@ const products = [
         id: "07",
         title: "Seafood Pizza",
         price: 115.0,
-        image01: product_02_image_02,
+        image01: product_02_image_01,
         image02: product_02_image_01,
-        image03: product_02_image_03,
+        image03: product_02_image_01,
         category: "Витамины",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
     },
@@ -108,11 +112,11 @@ const products = [
 
     {
         id: "11",
-        title: "VetExpert Beauty & Care Shampoo ",
+        title: "VetExpert Beauty  ",
         price: 35.0,
-        image01: product_08_image_01,
-        image02: product_08_image_01,
-        image03: product_08_image_01,
+        image01: product_10_image_01,
+        image02: product_10_image_01,
+        image03: product_10_image_01,
         category: "Шампунь",
 
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",

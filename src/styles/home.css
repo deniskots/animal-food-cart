@@ -1,0 +1,34 @@
+.feature__subtitle {
+    color: #b48a26;
+}
+
+.feature__title span {
+    color: #b48a26;
+}
+
+.feature__text {
+    color: #777;
+}
+
+.feature__item p {
+    color: #777;
+}
+.product__category {
+    background: #d3be87;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0px;
+    border-radius: 8px;
+}
+.product__category button {
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    background: transparent;
+    color: #fff;
+}
+.productBtnActive {
+    background: #fff !important;
+    border-radius: 5px;
+    color: #80641b !important;
+}
