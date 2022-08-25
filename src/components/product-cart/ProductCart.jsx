@@ -1,10 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../../styles/product-cart.css';
+import {useDispatch} from "react-redux";
+import {cartActions} from '../../redux/slices/cartSlice'
 
 
 const ProductCard = (props) => {
-    const {title, price, image01, id} = props.item
+    const {title, price, image01, id} = props.item;
+    const dispatch = useDispatch();
+
+    const addToCart = () => {
+        dispatch(cartActions.addItem(id, title, image01, price))
+    }
+
     return (
         <div className="product__item">
             <div className="product__img ">
@@ -17,7 +25,7 @@ const ProductCard = (props) => {
                 </h5>
                 <div className=" d-flex align-items-center justify-content-between ">
                     <span className="product__price">${price}</span>
-                    <button className="addCart__btn">
+                    <button onClick={addToCart} className="addCart__btn">
                         Добавить
                     </button>
                 </div>

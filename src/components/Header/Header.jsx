@@ -3,6 +3,7 @@ import {Container} from "react-bootstrap";
 import logo from '../../assets/images/logo.jpg';
 import {Link, NavLink} from "react-router-dom";
 import '../../styles/header.css'
+import {useSelector} from "react-redux";
 
 const nav__links = [
     {
@@ -24,8 +25,12 @@ const nav__links = [
 ]
 
 const Header = () => {
+
     const menuRef = useRef(null)
     const toggleMenu = () => menuRef.current.classList.toggle('show__menu')
+    const totalQuantity = useSelector(state => state.cart.totalQuantity)
+
+
     return (
         <header className='header'>
             <Container>
@@ -53,7 +58,7 @@ const Header = () => {
                     <div className="nav__right d-flex align-items-center gap-3">
                         <span className="cart__icon">
                             <i className="ri-shopping-basket-fill"></i>
-                            <span className="cart__badge">3</span>
+                            <span className="cart__badge">{totalQuantity}</span>
                         </span>
                         <span className="user">
                             <Link to='/login'>

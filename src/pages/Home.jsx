@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Helmet from '../components/Hl/Hel.js';
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Container, ListGroup, Row} from "react-bootstrap";
 import homeImg from '../assets/images/home-img.jpg';
+import homeImg2 from '../assets/images/home-img02.jpg';
 import '../styles/home-section.css'
 import {Link} from "react-router-dom";
 import Category from "../components/category/Category";
@@ -54,7 +55,6 @@ const Home = () => {
             setAllProducts(filterProduct)
         }
     }, [category]);
-
 
 
     return (
@@ -135,25 +135,25 @@ const Home = () => {
                             <div className="product__category d-flex align-items-center justify-content-center gap-4">
                                 <button
                                     className={`all_btn ${category === 'Все' ? 'productBtnActive' : ''}`}
-                                    onClick={()=>setCategory('Все')}
+                                    onClick={() => setCategory('Все')}
                                 >
                                     Все
                                 </button>
                                 <button
                                     className={`${category === 'Корм' ? 'productBtnActive' : ''}`}
-                                    onClick={()=>setCategory('Корм')}
+                                    onClick={() => setCategory('Корм')}
                                 >
                                     Корм
                                 </button>
                                 <button
                                     className={`${category === 'Витамины' ? 'productBtnActive' : ''}`}
-                                    onClick={()=>setCategory('Витамины')}
+                                    onClick={() => setCategory('Витамины')}
                                 >
                                     Витамины
                                 </button>
                                 <button
                                     className={`${category === 'Шампунь' ? 'productBtnActive' : ''}`}
-                                    onClick={()=>setCategory('Шампунь')}
+                                    onClick={() => setCategory('Шампунь')}
                                 >
                                     Шампунь
                                 </button>
@@ -166,6 +166,59 @@ const Home = () => {
                                 </Col>
                             ))
                         }
+                    </Row>
+                </Container>
+            </section>
+            <section className="choose-us">
+                <Container>
+                    <Row>
+                        <Col className="choose-us__text" lg="6" md="6">
+                            <div className="why__hot-dog">
+                                <h2 className="tasty__treat-title mb-4">
+                                    Почему <span>Hot Dog?</span>
+                                </h2>
+                                <p className="tasty__treat-desc">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum, minus. Tempora reprehenderit a corporis velit,
+                                    laboriosam vitae ullam, repellat illo sequi odio esse iste
+                                    fugiat dolor, optio incidunt eligendi deleniti!
+                                </p>
+                                <ListGroup className="mt-4">
+                                    <ListGroup.Item className="border-0 ps-0">
+                                        <p className=" choose__us-title d-flex align-items-center gap-2 ">
+                                            <i className="ri-checkbox-circle-line"></i> Быстро и Удобно
+                                        </p>
+                                        <p className="choose__us-desc">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                            Quia, voluptatibus.
+                                        </p>
+                                    </ListGroup.Item>
+
+                                    <ListGroup.Item className="border-0 ps-0">
+                                        <p className="choose__us-title d-flex align-items-center gap-2 ">
+                                            <i className="ri-checkbox-circle-line"></i> Большой ассортимент
+                                        </p>
+                                        <p className="choose__us-desc">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Qui, earum.
+                                        </p>
+                                    </ListGroup.Item>
+
+                                    <ListGroup.Item className="border-0 ps-0">
+                                        <p className="choose__us-title d-flex align-items-center gap-2 ">
+                                            <i className="ri-checkbox-circle-line"></i>Всегда наилучшее
+                                        </p>
+                                        <p className="choose__us-desc">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Qui, earum.
+                                        </p>
+                                    </ListGroup.Item>
+                                </ListGroup>
+                            </div>
+                        </Col>
+                        <Col lg="6" md="6">
+                            <img src={homeImg2} alt="why-hot-dog" className="w-100"/>
+                        </Col>
                     </Row>
                 </Container>
             </section>

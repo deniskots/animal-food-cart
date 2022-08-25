@@ -32,3 +32,76 @@
     border-radius: 5px;
     color: #80641b !important;
 }
+.hot-dog-title span {
+    color: #80641b;
+}
+.hot-dog-desc {
+    color: #777;
+    line-height: 28px;
+}
+.choose-us__text{
+    padding-top: 90px;
+}
+.choose__us-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.choose__us-title i {
+    font-weight: 500 !important;
+    color: #80641b;
+}
+.choose__us-desc {
+    color: #777;
+}
+
+@media only screen and (max-width: 768px) {
+    .home__content h5 {
+        font-size: 1rem;
+    }
+    .home__content p {
+        font-size: 10px;
+        line-height: 25px;
+    }
+    .home__title {
+        font-size: 1.5rem;
+        line-height: 40px;
+    }
+    .home__btns button {
+        padding: 5px 15px;
+        font-size: 10px;
+    }
+    .home__service p {
+        font-size: 10px !important;
+    }
+    .product__category {
+        padding: 15px;
+    }
+    .product__category button {
+        padding: 5px 15px;
+        font-size: 10px;
+    }
+    .hot-dog-desc {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .choose__us-title {
+        font-size: 12px;
+    }
+    .choose__us-desc {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .home__content {
+        text-align: center;
+    }
+    .home__btns {
+        justify-content: center;
+    }
+    .home__service {
+        justify-content: center;
+    }
+    .choose-us {
+        padding-top: 0 !important;
+    }
+}
