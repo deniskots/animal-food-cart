@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Helmet from '../components/Hl/Hel.js';
 import {Col, Container, ListGroup, Row} from "react-bootstrap";
 import homeImg from '../assets/images/home-img.jpg';
 import homeImg2 from '../assets/images/home-img02.jpg';
@@ -58,7 +57,7 @@ const Home = () => {
 
 
     return (
-        <Helmet title='Home'>
+        <>
             <section>
                 <Container>
                     <Row>
@@ -222,7 +221,9 @@ const Home = () => {
                     </Row>
                 </Container>
             </section>
-        </Helmet>
+        </>
+
+
     );
 };
 

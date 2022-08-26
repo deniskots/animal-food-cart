@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../../styles/product-cart.css';
 import {useDispatch} from "react-redux";
 import {cartActions} from '../../redux/slices/cartSlice'
+
+import '../../styles/product-cart.css';
 
 
 const ProductCard = (props) => {
