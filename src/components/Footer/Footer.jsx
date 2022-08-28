@@ -1,6 +1,6 @@
 import React from 'react';
 import {Col, Container, ListGroup, Row} from "react-bootstrap";
-import logo from "../../assets/images/logo.jpg";
+import logo from "../../assets/images/logo.svg";
 import '../../styles/footer.css'
 
 const Footer = () => {

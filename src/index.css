@@ -2,6 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 
 
 * {
@@ -23,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "RocknRoll One", sans-serif !important;
+    font-family: "Neucha", sans-serif !important;
 }
 
 a {
