@@ -9,6 +9,7 @@ import '../styles/allProducts.css'
 
 const AllProducts = () => {
     const [searchInput, setSearchInput] = useState("");
+    const [productData, setProductData] = useState(products);
     return (
         <div>
             <div className='comm-sec'>
@@ -42,13 +43,16 @@ const AllProducts = () => {
                             </div>
                         </Col>
                         {
-                            products.map(item => (
-                                <Col lg='3' md='4' sm='6' key={item.id}>
-                                    <ProductCart item={item} />
-                                </Col>
+                            productData.filter(item => {
+                                if (searchInput.value === '') return item
+                                if (item.title.toLowerCase().includes(searchInput.toLocaleLowerCase())) return item
+                            })
+                                .map(item => (
+                                    <Col lg='3' md='4' sm='6' key={item.id}>
+                                        <ProductCart item={item}/>
+                                    </Col>
                                 ))
                         }
-
 
 
                         {/*<div>
