@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 
 * {
@@ -22,9 +23,11 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5{
     font-family: "Neucha", sans-serif !important;
+}
+h6{
+    font-family: "EB Garamond", sans-serif !important;
 }
 
 a {
