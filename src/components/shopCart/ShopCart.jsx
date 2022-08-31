@@ -38,7 +38,7 @@ const ShopCart = () => {
                     </h6>
                     <button>
                         <Link to="/checkout" onClick={toggleShopCart}>
-                            Checkout
+                            Оформить
                         </Link>
                     </button>
                 </div>

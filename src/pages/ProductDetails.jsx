@@ -2,19 +2,24 @@ import React, {useEffect, useState} from 'react';
 import products from "../assets/fake-data/products";
 import CommonSection from "../components/common-section/CommonSection";
 import {Col, Container, Row} from "react-bootstrap";
-import product_01_image_01 from "../assets/images/product_01_image_01.jpg";
 
 import '../styles/productDetails.css';
 import '../styles/allProducts.css';
 import '../styles/product-cart.css';
 import {useNavigate, useParams} from "react-router-dom";
 import ProductCart from "../components/product-cart/ProductCart";
+import {cartActions} from "../redux/slices/cartSlice";
+import {useDispatch} from "react-redux";
 
 const ProductDetails = () => {
     //отображение картинки продукта
     const {id} = useParams()
     const product = products.find(item => item.id === id)
     const [prevImg, setPrevImg] = useState(product.image01)
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [review, setReview] = useState("");
 
     const { title, price, category, desc, image01 } = product;
 
@@ -23,14 +28,25 @@ const ProductDetails = () => {
     //схожие товары
     const relatedProduct = products.filter((item) => category === item.category);
     const navigate = useNavigate();
+    const dispatch = useDispatch()
 
     useEffect(() => {
         setPrevImg(product.image01)
     },[product])
+//для воззащения выбранного товара
+    useEffect(() => {
+        window.scrollTo(0, 10);
+    }, [product]);
 
     const goBack = () => {
         navigate(-1)
     }
+
+    const addItem = () => {
+        dispatch(cartActions.addItem({id, title, image01, price}))
+    }
+
+
 
     return (
     <div>
@@ -71,7 +87,7 @@ const ProductDetails = () => {
                             <p className="category mb-5">
                                 Категория: <span>{category}</span>
                             </p>
-                            <button className="addCart__btn">
+                            <button className="addCart__btn" onClick={addItem}>
                                 Добавить
                             </button>
                         </div>
@@ -103,15 +119,31 @@ const ProductDetails = () => {
                                         <p className="user__email">jhon1@gmail.com</p>
                                         <p className="feedback__text">Все очень плохо, аллергия</p>
                                     </div>
-                                    <form className='form'>
+                                    <form className='form' onSubmit={(e) => e.preventDefault()}>
                                         <div className="form__group">
-                                            <input type="text" placeholder='Введите имя'/>
+                                            <input
+                                                type="text"
+                                                placeholder='Введите имя'
+                                                value={name}
+                                                onChange={e => setName(e.target.value)}
+                                                required/>
                                         </div>
                                         <div className="form__group">
-                                            <input type="text" placeholder='Введите имя'/>
+                                            <input
+                                                type="text"
+                                                placeholder='Введите почту'
+                                                value={email}
+                                                onChange={e => setEmail(e.target.value)}
+                                                required/>
                                         </div>
                                         <div className="form__group">
-                                            <textarea type="text" rows={5} placeholder='Введите имя'/>
+                                            <textarea
+                                                type="text"
+                                                rows={5}
+                                                placeholder='Введите текст'
+                                                value={review}
+                                                onChange={e => setReview(e.target.value)}
+                                                required/>
                                         </div>
                                         <button type="submit" className="addCart__btn">
                                             Отправить
