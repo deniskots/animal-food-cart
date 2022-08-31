@@ -32,7 +32,6 @@ const ProductDetails = () => {
         navigate(-1)
     }
 
-
     return (
     <div>
         <div className='comm-sec'>
@@ -67,10 +66,10 @@ const ProductDetails = () => {
                         <div className="single__product-content">
                             <h2 className="product__title mb-3">{title}</h2>
                             <p className="product__price">
-                                Price: <span>${price}</span>
+                                Цена: <span>${price}</span>
                             </p>
                             <p className="category mb-5">
-                                Category: <span>{category}</span>
+                                Категория: <span>{category}</span>
                             </p>
                             <button className="addCart__btn">
                                 Добавить
