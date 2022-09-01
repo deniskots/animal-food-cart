@@ -74,7 +74,7 @@ const ProductDetails = () => {
                     </Col>
                     <Col lg="4" md="4">
                         <div className="product__main-img">
-                            <img src={prevImg} alt="" className="w-80"/>
+                            <img src={prevImg} alt="" className="w-75"/>
                         </div>
                     </Col>
 

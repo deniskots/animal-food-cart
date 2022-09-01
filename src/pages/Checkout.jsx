@@ -14,8 +14,22 @@ const Checkout = () => {
     const [postalCode, setPostalCode] = useState("");
 
     const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
-    const shippingCost = 30;
-    const totalAmount = cartTotalAmount + Number(shippingCost);
+
+    const shippingInfo = [];
+
+    const submitHandler = (e) => {
+        const userShippingAddress = {
+            name: enterName,
+            email: enterEmail,
+            phone: enterNumber,
+            country: enterCountry,
+            city: enterCity,
+            postalCode: postalCode,
+        };
+
+        shippingInfo.push(userShippingAddress);
+        console.log(shippingInfo);
+    };
 
 
     return (
@@ -83,7 +97,7 @@ const Checkout = () => {
                                         onChange={(e) => setPostalCode(e.target.value)}
                                     />
                                 </div>
-                                <button type="submit" className="addCart__btn">
+                                <button type="submit" className="addCart__btn" onClick={submitHandler}>
                                     Оплатить
                                 </button>
                             </form>
@@ -92,7 +106,7 @@ const Checkout = () => {
                             <div className="checkout__bill">
                                 <div className="checkout__total">
                                     <h3 className="d-flex align-items-center justify-content-between">
-                                        Итого: <span>${totalAmount}</span>
+                                        Итого: <span>${cartTotalAmount}</span>
                                     </h3>
                                 </div>
                             </div>
