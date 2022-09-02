@@ -1,0 +1,12 @@
+.testimonial__subtitle {
+    font-size: 18px;
+}
+.testimonial__desc {
+    font-size: 14px;
+}
+.social__links span i {
+    padding: 10px;
+    background: #dfb920;
+    color: #fff;
+    border-radius: 50%;
+}

@@ -61,12 +61,12 @@ const Home = () => {
             <section>
                 <Container>
                     <Row>
-                        <Col lg='6' md='6'>
+                        <Col lg='6' md='4'>
                             <div className="home__img">
                                 <img src={homeImg} alt="home-img" className='w-100'/>
                             </div>
                         </Col>
-                        <Col lg='6' md='6'>
+                        <Col lg='6' md='4'>
                             <div className="home__content">
                                 <h5 className='mb-3'>Магазин, где обретают счастье</h5>
                                 <h1 className='mb-4 home__title'>Покупай <span>лапку счастья</span> и участвуй в
@@ -75,7 +75,8 @@ const Home = () => {
                                     velit..</p>
                                 <div className="home__btns d-flex align-items-center gap-5 mt-4">
                                     <button className='order__btn d-flex align-items-center justify-content-between'>
-                                        Купить сейчас
+                                        <Link to='/cart'>Купить сейчас</Link>
+
                                         <i className="ri-arrow-right-s-line"></i>
                                     </button>
                                     <button className='products__btn d-flex align-items-center justify-content-between'>
@@ -127,7 +128,7 @@ const Home = () => {
             <section>
                 <Container>
                     <Row>
-                        <Col lg='12' className='text-center'>
+                        <Col lg='12' md='3' className='text-center'>
                             <h2>Ваши популярные товары</h2>
                         </Col>
                         <Col lg="12">
