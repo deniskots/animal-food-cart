@@ -1,13 +1,11 @@
 .paginationBtns {
     width: 80%;
     height: 40px;
-    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     column-gap: 10px;
     list-style: none;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 .paginationBtns a:hover {
     background: #654a05;
@@ -17,8 +15,8 @@
     padding: 5px 13px;
     background: transparent;
     color: #0a0a0a !important;
-    border: 1px solid #654a05;
-    border-radius: 50px;
+    border: 1px solid #fde4e4;
+    border-radius: 7px;
     display: flex;
     align-items: center;
     justify-content: center;

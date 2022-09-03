@@ -163,7 +163,6 @@ const ProductDetails = () => {
                             </Col>
                         ))
                     }
-                    ))}
                 </Row>
             </Container>
         </section>
